@@ -6,6 +6,11 @@ colorTo: yellow
 sdk: static
 app_file: app.py
 pinned: false
+tags:
+  - flask
+  - fake-news
+  - nlp
+  - machine-learning
 ---
 
 
