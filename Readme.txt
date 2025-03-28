@@ -1,3 +1,14 @@
+---
+title: Fake News Detector
+emoji: 📰
+colorFrom: blue
+colorTo: yellow
+sdk: static
+app_file: app.py
+pinned: false
+---
+
+
 # CWNatLatFLASK
 
 This project runs a Flask web app for fake news detection using pre-trained models (Naive Bayes, Random Forest, SVM) and TF-IDF vectors.
