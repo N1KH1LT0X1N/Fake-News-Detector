@@ -62,8 +62,8 @@ def train_and_load_models():
     else:
         print("Precomputed files not found. Training models...")
         try:
-            fake_news = pd.read_csv("data\Fake-1.csv", usecols=['text'])
-            true_news = pd.read_csv("data\True-1.csv", usecols=['text'])
+            fake_news = pd.read_csv(r"data\Fake-1.csv", usecols=['text'])
+            true_news = pd.read_csv(r"data\True-1.csv", usecols=['text'])
         except FileNotFoundError:
             print("Error: 'data\Fake-1.csv' or 'data\True-1.csv' not found. Please ensure they are in the provided directory.")
             sys.exit(1)
