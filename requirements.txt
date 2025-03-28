@@ -5,3 +5,4 @@ numpy==2.2.4
 scikit-learn==1.6.1
 joblib==1.4.2
 vaderSentiment==3.3.2
+gradio==2.0.10

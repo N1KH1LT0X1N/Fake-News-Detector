@@ -23,7 +23,7 @@ from flask import render_template
 from vectorizer_utils import clean_text, create_pipeline
 
 
-print("Running the fake news detector script (version 2025-03-25 v8)")
+# print("Running the fake news detector script (version 2025-03-25 v8)")
 
 app = Flask(__name__)
 
@@ -33,7 +33,7 @@ tfidf_vectorizer = None
 dataset_tfidf = None
 df = None
 
-def find_available_port(start_port=5000):
+def find_available_port(start_port=7860):
     port = start_port
     while True:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -71,7 +71,7 @@ def train_and_load_models():
         fake_news['label'] = 0
         true_news['label'] = 1
         df = pd.concat([fake_news, true_news])
-        df = df.sample(n=5000, random_state=42)
+        df = df.sample(n=7860, random_state=42)
         df["text"] = df["text"].apply(clean_text)
         X_train, _, y_train, _ = train_test_split(df["text"], df["label"], test_size=0.2, random_state=42)
 
@@ -218,7 +218,7 @@ def index():
     return response
 
 def run_flask():
-    port = find_available_port(start_port=5000)
+    port = find_available_port(start_port=7860)
     url = f"http://127.0.0.1:{port}"
     print(f"Starting Flask server on {url}...")
     threading.Timer(0.5, lambda: webbrowser.open_new_tab(url)).start()
