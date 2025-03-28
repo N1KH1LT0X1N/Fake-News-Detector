@@ -3,7 +3,7 @@ title: Fake News Detector
 emoji: 📰
 colorFrom: blue
 colorTo: yellow
-sdk: static
+sdk: docker
 app_file: app.py
 pinned: false
 tags:
