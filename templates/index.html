@@ -145,8 +145,15 @@
       <select id="model_choice" name="model_choice">
         <option value="Naive Bayes" {% if model_choice == "Naive Bayes" %}selected{% endif %}>Naive Bayes</option>
         <option value="Random Forest" {% if model_choice == "Random Forest" %}selected{% endif %}>Random Forest</option>
-        <option value="SVM" {% if model_choice == "SVM" %}selected{% endif %}>SVM</option>
       </select>
+
+      <label for="threshold">Prediction Threshold:</label>
+      <select name="threshold" id="threshold">
+        <option value="0.3" {% if threshold == 0.3 %}selected{% endif %}>0.3 - More sensitive</option>
+        <option value="0.5" {% if threshold == 0.5 %}selected{% endif %}>0.5 - Balanced (default)</option>
+        <option value="0.7" {% if threshold == 0.7 %}selected{% endif %}>0.7 - More strict</option>
+      </select>
+
 
       <button type="submit">Analyze</button>
     </form>
