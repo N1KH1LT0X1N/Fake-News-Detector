@@ -76,9 +76,9 @@ def train_and_load_models():
 
         fake_news['label'] = 0
         true_news['label'] = 1
-        df = pd.concat([fake_news, true_news]).sample(n=7860, random_state=42)
+        df = pd.concat([fake_news, true_news]).sample(n=39998, random_state=42)
         df['text'] = df['text'].apply(clean_text)
-
+        
         X_train, _, y_train, _ = train_test_split(df['text'], df['label'], test_size=0.2, random_state=42)
 
         nb_pipeline = create_pipeline(MultinomialNB())
