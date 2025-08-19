@@ -22,7 +22,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from vectorizer_utils import clean_text, create_pipeline
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, origins=["chrome-extension://*"])  # Enable CORS for all routes
 
 # Global variables
 models = {}

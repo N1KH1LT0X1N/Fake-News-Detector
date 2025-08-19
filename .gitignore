@@ -7,3 +7,4 @@ Dockerfile
 Procfile
 requirements.full.txt
 venv
+fake-news-detector-extension
