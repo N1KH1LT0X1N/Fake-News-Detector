@@ -1,0 +1,8 @@
+__pycache__
+.vscode
+.gitattributes
+EDA
+app_backup.py
+Dockerfile
+Procfile
+requirements.full.txt
